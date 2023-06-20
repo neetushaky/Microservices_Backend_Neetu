@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  employee-service:
+
+    image: employee-service
+    mem_limit: 700m
+
+    build:
+     
+     dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - docker-network
+    
+    restart: on-failure
+   
+    
+  
+  
+networks:
+  docker-network:  
